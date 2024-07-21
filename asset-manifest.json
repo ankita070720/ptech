@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ankita070720/PTech/static/css/main.f855e6bc.css",
-    "main.js": "/ankita070720/PTech/static/js/main.a9b6affb.js",
-    "static/js/453.aae945b9.chunk.js": "/ankita070720/PTech/static/js/453.aae945b9.chunk.js",
-    "static/media/logo.svg": "/ankita070720/PTech/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/ankita070720/PTech/index.html",
-    "main.f855e6bc.css.map": "/ankita070720/PTech/static/css/main.f855e6bc.css.map",
-    "main.a9b6affb.js.map": "/ankita070720/PTech/static/js/main.a9b6affb.js.map",
-    "453.aae945b9.chunk.js.map": "/ankita070720/PTech/static/js/453.aae945b9.chunk.js.map"
+    "main.css": "/ptech/static/css/main.f855e6bc.css",
+    "main.js": "/ptech/static/js/main.40389a5d.js",
+    "static/js/453.aae945b9.chunk.js": "/ptech/static/js/453.aae945b9.chunk.js",
+    "static/media/logo.svg": "/ptech/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/ptech/index.html",
+    "main.f855e6bc.css.map": "/ptech/static/css/main.f855e6bc.css.map",
+    "main.40389a5d.js.map": "/ptech/static/js/main.40389a5d.js.map",
+    "453.aae945b9.chunk.js.map": "/ptech/static/js/453.aae945b9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.a9b6affb.js"
+    "static/js/main.40389a5d.js"
   ]
 }
