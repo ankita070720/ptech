@@ -73,3 +73,7 @@ git remote add origin git@github.com:ankita070720/PTech.git
 git branch -M main
 git push -u origin main
 
+npm install @mui/material @emotion/react @emotion/styled
+rm -rf node_modules/
+npm install
+
