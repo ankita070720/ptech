@@ -95,11 +95,17 @@ header .part3 .circle{ align-items: center; justify-content: center; min-width: 
 
 }
 header .part3 .circle svg{font-size: 22px;}
+.userTab{
+  font-size: 18px; color: rgba(0,0,0,0.8); font-weight: 700;
+}
+.userTab button{
+  background: transparent !important;
+}
 .cartTab .price{
   font-size: 18px; color: rgba(0,0,0,0.8); font-weight: 700;
 }
 .cartTab button{
-  background: #fff1ee !important;
+  background: transparent !important;
 }
 .cartTab button svg{
   stroke: #ea2b0f !important;
@@ -116,9 +122,9 @@ nav .allCatTab .icon1{font-size:20px;}
 nav .allCatTab .icon2{font-size:15px;}
 
 nav .navpart1 .catWrapper{position: relative;}
-nav .navpart1 .catWrapper .sidebarNav{width: 300px; height: 0px; opacity:0; background: #fff; position: absolute; top:123%; left:0px; border: 1px solid rgba(0,0,0,0.1); padding: 15px 0px; transition: all 0.2s; visibility: hidden; z-index:100;  }
+nav .navpart1 .catWrapper .sidebarNav{width: 300px; height: 0px; opacity:0; background: #fff; position: absolute; top:119%; left:0px; border: 1px solid rgba(0,0,0,0.1); padding: 15px 0px; transition: all 0.2s; visibility: hidden; z-index:100;  }
 nav .navpart1 .catWrapper .sidebarNav ul li{width: 100%; list-style: none; padding: 0px 10px;}
-nav .navpart1 .catWrapper .sidebarNav ul li button{color: #000; width:100%; justify-content: flex-start; text-transform: capitalize;}
+nav .navpart1 .catWrapper .sidebarNav ul li button{color:rgba(0, 0, 0, 0.6);font-size: 14px; width:100%; font-weight: 600; justify-content: flex-start; text-transform: capitalize;}
 nav .navpart1 .catWrapper .sidebarNav ul li button svg{font-size: 12px;opacity: 0.6;}
 nav .navpart1 .catWrapper .sidebarNav ul li button:hover{background: transparent;}
 nav .navpart1 .catWrapper .sidebarNav.open{height: auto !important; visibility: inherit !important; opacity: 1 !important;}
@@ -131,7 +137,7 @@ nav .navpart2 ul li {
   padding-bottom: 20px;
 }
 nav .navpart2 ul li a{text-decoration: none;}
-nav .navpart2 ul li a button{font-size: 14px; font-weight: 600;text-decoration: none; color:rgba(0,0,0,0.6); text-transform: uppercase; display: flex; padding: 10px 15px; align-items: center; transition: all 0.2s ease-in-out; border-radius: 25px;}
+nav .navpart2 ul li a button{font-size: 14px; font-weight: 600;text-decoration: none; color:rgba(0,0,0,0.6); text-transform: uppercase;  padding: 10px 15px; align-items: center; transition: all 0.2s ease-in-out; border-radius: 25px;}
 nav .navpart2 ul li a:hover{
   background: #f0faff;color: #2bbef9;
 }
@@ -265,7 +271,7 @@ footer .linksWrap ul li a:hover{text-decoration: none !important;}
 
 footer .copyright ul li a{display: flex; align-items: center; justify-content: center;width: 35px; height: 35px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.2); transition: all 0.3s ease-in-out;}
 footer .copyright ul li a svg{font-size: 16px; color: rgba(0,0,0,0.8);}
-footer .copyright ul li a:hover{background: #2bbef9 !important;}
+footer .copyright ul li a:hover{background: #cdc1b6 !important;}
 footer .copyright ul li a:hover svg{color: #fff !important;}
 
 .productModal .MuiPaper-elevation{padding: 25px; position:relative; max-width:900px !important; width:900px !important;}

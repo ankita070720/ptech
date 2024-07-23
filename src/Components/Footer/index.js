@@ -1,9 +1,10 @@
-import {LuShirt} from "react-icons/lu";
-import { TbTruckDelivery } from "react-icons/tb";
-import { TbDiscount } from "react-icons/tb";
-import {CiBadgeDollar} from "react-icons/ci";
+
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa6";
+import { MdOutlineContactPhone } from "react-icons/md";
+import { FiUser } from "react-icons/fi";
+import { PiUsersFourLight } from "react-icons/pi";
+import { FaBook } from "react-icons/fa6";
 
 const Footer = ()=>{
     return(<>
@@ -11,20 +12,20 @@ const Footer = ()=>{
     <div className="container">
         <div className="topInfo row">
         <div className="col d-flex align-items-center">
-            <span><LuShirt/></span>
-            <span className="ms-2">Company</span>
+            <span><PiUsersFourLight/></span>
+            <span className="ml-2">Company</span>
             </div>
             <div className="col d-flex align-items-center">
-            <span><TbTruckDelivery/></span>
-            <span className="ms-2">Jobs</span>
+            <span><FiUser/></span>
+            <span className="ml-2">Jobs</span>
             </div>
             <div className="col d-flex align-items-center">
-            <span><TbDiscount /></span>
-            <span className="ms-2">Topic wise learning</span>
+            <span><FaBook /></span>
+            <span className="ml-2">Topic wise learning</span>
             </div>
             <div className="col d-flex align-items-center">
-            <span><CiBadgeDollar/></span>
-            <span className="ms-2">Interview Prepration</span>
+            <span><MdOutlineContactPhone/></span>
+            <span className="ml-2">Interview Prepration</span>
             </div>
            
         </div>
@@ -88,7 +89,7 @@ const Footer = ()=>{
         </div>
         <div className="copyright mt-3 pt-3 pb-3 d-flex">
             <p className="mb-0">Copyright 20204. All rights are reserved.</p>
-            <ul className="list list-inline ms-auto mb-0">
+            <ul className="list list-inline ml-auto mb-0">
                 <li className="list-inline-item">
                     <Link to="#"><FaFacebookF/></Link>
                 </li>
