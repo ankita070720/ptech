@@ -6,8 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import Banner1 from "../../assets/images/slider1.jpg";
-import Banner2 from "../../assets/images/slider2.jpg";
+import Banner1 from "../../assets/images/banner1.jpg";
+import Banner2 from "../../assets/images/banner2.jpg";
 import Banner3 from "../../assets/images/banner3.jpg";
 import Banner4 from "../../assets/images/banner4.jpg";
 
