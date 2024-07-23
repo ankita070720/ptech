@@ -5,11 +5,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
+
 body{
   font-family: "Dosis", sans-serif;
   font-size: 14px;
   color: rgba(0,0,0,0.8);
   overflow-x: hidden;
+  
 }
 ul{
   margin-bottom: 0 !important;
@@ -23,7 +25,7 @@ ul{
 .badge{display: inline-block; padding: 7px 10px;}
 .badge.bg-success {background: #e5f8ed !important; color: #16b858 !important;}
 .bg-blue{
-  background: #cdc1b6;
+  background: #3b433d;
  
 }
 .cursor{
@@ -39,7 +41,7 @@ ul{
 ::-webkit-scrollbar-thumb{background: #ccc !important;}
 ::-webkit-scrollbar-track{background: transparent !important;}
 .headerWrapper .top-strip{padding: 8px 0px;}
-.headerWrapper .top-strip p{color: #010101; font-size: 16px; font-weight:500;}
+.headerWrapper .top-strip p{color: #cdc1b6; font-size: 16px; font-weight:500;}
 .headerWrapper .header{
   width: 100%; height: auto; padding: 25px 0px;
 }
@@ -80,12 +82,12 @@ nav{border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 0px;}
   background: #2bbef9;
 }
 
- .headerSearch{width:60%; height: 60px; background: #f3f4f7; padding: 5px; position: relative; border-radius: 5px; border: 1px solid rgba(0,0,0,0.1)}
+ .headerSearch{width:60%; height: 60px; background: #ece9e7; padding: 5px; position: relative; border-radius: 5px; border: 1px solid rgba(0,0,0,0.1)}
  .headerSearch input{width:100%; height: 45px; background: transparent !important; outline : none !important; font-size: 18px; padding:0px 20px !important; color: rgba(0,0,0,0.7); border: 0 !important}
  .headerSearch input::-webkit-input-placeholder{color: rgba(0,0,0,0.6);}
  .headerSearch button{position: absolute;top:10px; right: 20px; z-index: 100;min-width: 40px !important;height: 40px !important; width: 40px !important; border-radius: 50% !important; color:#000;border: 0 !important;
   outline: none !important;
-  background: #f3f4f7 !important;}
+  background: #ece9e7 !important;}
  .headerSearch button svg{font-size: 25px; opacity: 0.8;}
 
 
@@ -106,9 +108,9 @@ header .part3 .circle svg{font-size: 22px;}
   position: absolute; top:-6px; right: -4px; background: #ea2b0f; border-radius: 50%; color: #fff; width:20px; height: 20px;
 }
 
-nav .allCatTab{ background: #2bbef9; padding: 10px 15px !important; border-radius: 30px !important;}
-nav .allCatTab *{color:#fff;}
-nav .allCatTab:hover{background:#2bbef9;}
+nav .allCatTab{ background: #3b433d; padding: 10px 15px !important; border-radius: 30px !important;}
+nav .allCatTab *{color:#cdc1b6;}
+nav .allCatTab:hover{background:#3b433d;}
 nav .allCatTab .text{font-weight:600;}
 nav .allCatTab .icon1{font-size:20px;}
 nav .allCatTab .icon2{font-size:15px;}
@@ -158,6 +160,7 @@ nav .navpart2 ul li:hover .submenu{opacity: 1; visibility: inherit; top:100%;}
  .slick-next::before{font-family: FontAwesome !important; color:#fff;}
 .slick-prev{left: 25px !important;}
 .slick-prev::before{font-family: FontAwesome !important;  color:#fff;}
+
 
 /*product section */
 
@@ -289,42 +292,3 @@ footer .copyright ul li a:hover svg{color: #fff !important;}
 .productModal .actions button svg{font-size: 15px !important;}
 
 
-.swiper {
-  width: 100%;
-  height: 100%;
-  background: #000;
-}
-
-.swiper-slide {
-  font-size: 18px;
-  color: #fff;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 40px 60px;
-}
-
-.parallax-bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 130%;
-  height: 100%;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
-}
-
-.swiper-slide .title {
-  font-size: 41px;
-  font-weight: 300;
-}
-
-.swiper-slide .subtitle {
-  font-size: 21px;
-}
-
-.swiper-slide .text {
-  font-size: 14px;
-  max-width: 400px;
-  line-height: 1.3;
-}

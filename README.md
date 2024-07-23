@@ -77,3 +77,6 @@ npm install @mui/material @emotion/react @emotion/styled
 rm -rf node_modules/
 npm install
 
+#24292e
+#cdc1b6
+#3b433d
