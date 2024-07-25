@@ -7,8 +7,8 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
 
 body{
-  font-family: "Dosis", sans-serif;
-  font-size: 14px;
+  font-family: "Dosis", sans-serif !important;
+  font-size: 16px;
   color: rgba(0,0,0,0.8);
   overflow-x: hidden;
   
@@ -36,6 +36,9 @@ ul{
 }
 .text-sml{
   font-size: 14px;
+}
+.text-medium{
+  font-size: 18px;
 }
 ::-webkit-scrollbar{width: 8px; height: 8px;}
 ::-webkit-scrollbar-thumb{background: #ccc !important;}
@@ -96,7 +99,7 @@ header .part3 .circle{ align-items: center; justify-content: center; min-width: 
 }
 header .part3 .circle svg{font-size: 22px;}
 .userTab{
-  font-size: 18px; color: rgba(0,0,0,0.8); font-weight: 700;
+  font-size: 18px; color: rgba(0,0,0,0.6); font-weight: 600;
 }
 .userTab button{
   background: transparent !important;
@@ -304,10 +307,31 @@ footer .copyright ul li a:hover svg{color: #fff !important;}
   border: 1px solid #cdc1b6;
   border-radius: 10px;
   padding: 25px 40px;
+  transition: transform 0.3s, box-shadow 0.3s;
   
 }
 .homeCat .swiper .item h6{font-size: 25px;}
-.homeCat .swiper .item:hover{background-color:#cdc1b6; color: #fff; border: 1px solid #cdc1b6;}
+.homeCat .swiper .item img {
+  object-fit: cover;
+}
+.homeCat .swiper .item:hover{background-color:#cdc1b6; color: #fff; transform: translateY(-10px);
+  box-shadow: 0 4px 20px #cdc1b6;}
+.team-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root{
+  fill: #cdc1b6 !important;
+  font-size: 35px !important;
+}
+.css-8t49rw-MuiStepConnector-line{
+  border-color: #cdc1b6 !important;
+}
+.css-1hv8oq8-MuiStepLabel-label{
+  font-size: 20px !important;
+}
 
-
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover{
+  background-color: #cdc1b6 !important;
+  color: #fff !important;
+}

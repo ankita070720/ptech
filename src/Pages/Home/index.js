@@ -1,14 +1,8 @@
 import HomeBanner from "../HomeBanner/Index";
-import { useState } from "react";
-
 import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
 import * as React from 'react';
 import StepContent from '@mui/material/StepContent';
-
-
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -17,86 +11,55 @@ import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
+import { Typography} from '@mui/material';
+
+const jobs = [
+  { title: 'Software Engineer', description: 'Develop and maintain software applications.', id: 1 },
+  { title: 'Data Scientist', description: 'Analyze and interpret complex data.', id: 2 },
+  { title: 'Product Manager', description: 'Lead product development teams.', id: 3 },
+];
 
 
+const companies = [
+  { name: 'TechCorp', description: 'Leading innovator in tech solutions.', id: 1 },
+  { name: 'DataMinds', description: 'Pioneers in data analysis and AI.', id: 2 },
+  { name: 'Productive Inc.', description: 'Experts in product management.', id: 3 },
+  { name: 'Productive Inc.', description: 'Experts in product management.', id: 3 },
+  { name: 'Productive Inc.', description: 'Experts in product management.', id: 3 },
+  
+];
+
+const teamMembers = [
+    { name: 'Alice Johnson', role: 'CEO', img: 'path/to/alice.jpg', id: 1 },
+    { name: 'Bob Smith', role: 'CTO', img: 'path/to/bob.jpg', id: 2 },
+    { name: 'Charlie Brown', role: 'Lead Developer', img: 'path/to/charlie.jpg', id: 3 },
+  ];
+  
 
 
-
-
-
-const steps = [
-    {
-      label: 'Relevant jobs',
-      description: `For each ad campaign that you create, you can control how much
-                you're willing to spend on clicks and conversions, which networks
-                and geographical locations you want your ads to show on, and more.`,
-    },
-    {
-      label: 'Create an ad group',
-      description:
-        'An ad group contains one or more ads which target a shared set of keywords.',
-    },
-    {
-      label: 'Create an ad',
-      description: `Try out different ad text to see what brings in the most customers,
-                and learn how to enhance your ads using features like ad extensions.
-                If you run into any problems with your ads, find out how to tell if
-                they're running and how to resolve approval issues.`,
-    },
+  const steps = [
+    { title: 'Innovation', description: 'We lead the industry with innovative solutions.' },
+    { title: 'Culture', description: 'Our culture fosters creativity and collaboration.' },
+    { title: 'Growth', description: 'Opportunities for personal and professional growth.' },
   ];
 
-
 const Home=()=>{
-    const [activeStep, setActiveStep] = React.useState(0);
-
-    const handleNext = () => {
-      setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    };
-  
-    const handleBack = () => {
-      setActiveStep((prevActiveStep) => prevActiveStep - 1);
-    };
-  
-    const handleReset = () => {
-      setActiveStep(0);
-    };
-    const [itemBag]= useState([
-        '#fffceb',
-        '#ecffec',
-        '#feefea',
-        '#fff3eb',
-        '#fff3ff',
-        '#f2fce4',
-        '#feefea',
-        '#fffceb',
-        '#feefea',
-        '#ecffec',
-        '#feefea',
-        '#fff3eb',
-        '#fff3ff',
-        '#f2fce4',
-        '#feefea',
-        '#fffceb',
-        '#feefea',
-        '#ecffec'
-    ]);   
+    
+    
     return(<>
     <HomeBanner/>
  <section className="homeSection">
         <div className="container">
           <div className="row homeProducts">
-          
-            <div className="col-md-12 productRow">
+           <div className="col-md-12 productRow">
               <div className="d-flex align-item-center">
                 <div className="info w-75">
                   <h3 className="mb-0 hd">Major firms are hiring at the moment.</h3>
-                  <p className="text-light text-sml mb-0">
+                  <p className="text-light text-medium mb-0">
                     Seize this opportunity to advance your career with industry leaders.
-                  </p>{" "}
+                  </p>
                 </div>
-                <Button className="viewAllBtn ms-auto">
+                <Button className="viewAllBtn ml-auto">
                   View All 
                 </Button>
               </div>
@@ -105,7 +68,7 @@ const Home=()=>{
         <Swiper
         slidesPerView={4}
         spaceBetween={15}
-        navigation={true}
+        navigation={false}
         slidesPerGroup={1}
         autoplay={{
             delay: 3000,
@@ -113,152 +76,68 @@ const Home=()=>{
           }}
         modules={[Navigation, Autoplay]}
         
-        className="mySwiper"
-      >
-        
-                    <SwiperSlide>
-                    <div className="item text-center cursor relative overflow-hidden rounded-3xl border border-outline-variant p-6 text-on-surface duration-100" >
-                                
-                                    <div className="d-flex align-item-center justify-center">
-                                        <img src="https://swiperjs.com/images/libs/js.svg" alt="imag"/>
-                                    </div>
-                                    <div className="mt-4 hidden justify-center sm:block">
-                                    <h6>PAytm</h6>
-                                    </div>
-                                     
-                                    </div>
-             
-                    </SwiperSlide>
-                    <SwiperSlide>
-                    <div className="item text-center cursor relative overflow-hidden rounded-3xl border border-outline-variant p-6 text-on-surface duration-100" >
-                                
-                                    <div className="d-flex align-item-center justify-center">
-                                        <img src="https://swiperjs.com/images/libs/js.svg" alt="imag"/>
-                                    </div>
-                                    <div className="mt-4 hidden justify-center sm:block">
-                                    <h6>PAytm</h6>
-                                    </div>
-                                     
-                                    </div>
-             
-                    </SwiperSlide>     <SwiperSlide>
-                    <div className="item text-center cursor relative overflow-hidden rounded-3xl border border-outline-variant p-6 text-on-surface duration-100" >
-                                
-                                    <div className="d-flex align-item-center justify-center">
-                                        <img src="https://swiperjs.com/images/libs/js.svg" alt="imag"/>
-                                    </div>
-                                    <div className="mt-4 hidden justify-center sm:block">
-                                    <h6>PAytm</h6>
-                                    </div>
-                                     
-                                    </div>
-             
-                    </SwiperSlide>     <SwiperSlide>
-                    <div className="item text-center cursor relative overflow-hidden rounded-3xl border border-outline-variant p-6 text-on-surface duration-100" >
-                                
-                                    <div className="d-flex align-item-center justify-center">
-                                        <img src="https://swiperjs.com/images/libs/js.svg" alt="imag"/>
-                                    </div>
-                                    <div className="mt-4 hidden justify-center sm:block">
-                                    <h6>PAytm</h6>
-                                    </div>
-                                     
-                                    </div>
-             
-                    </SwiperSlide>     <SwiperSlide>
-                    <div className="item text-center cursor relative overflow-hidden rounded-3xl border border-outline-variant p-6 text-on-surface duration-100" >
-                                
-                                    <div className="d-flex align-item-center justify-center">
-                                        <img src="https://swiperjs.com/images/libs/js.svg" alt="imag"/>
-                                    </div>
-                                    <div className="mt-4 hidden justify-center sm:block">
-                                    <h6>PAytm</h6>
-                                    </div>
-                                     
-                                    </div>
-             
-                    </SwiperSlide>     <SwiperSlide>
-                    <div className="item text-center cursor relative overflow-hidden rounded-3xl border border-outline-variant p-6 text-on-surface duration-100" >
-                                
-                                    <div className="d-flex align-item-center justify-center">
-                                        <img src="https://swiperjs.com/images/libs/js.svg" alt="imag"/>
-                                    </div>
-                                    <div className="mt-4 hidden justify-center sm:block">
-                                    <h6>PAytm</h6>
-                                    </div>
-                                     
-                                    </div>
-             
-                    </SwiperSlide>
-              
+        className="mySwiper">
+    {companies.map((company)=>{
+        return (
+            <SwiperSlide>
+            <div className="item text-center cursor relative overflow-hidden rounded-3xl border border-outline-variant p-6 text-on-surface duration-100" >
+                        
+            <Typography className="mt-4" variant="h5">{company.name}</Typography>
+                    <Typography className="mt-2"  variant="body2">{company.description}</Typography>
+                          
+                             
+                            </div>
      
-        </Swiper>
+            </SwiperSlide>
+        )
+    })}
+           </Swiper>
       
               </div>
-
-            
-              <div className="d-flex mt-4 mb-5 bannerSec">
-                <div className="banner">
+ </div>
+          </div>
+        </div>
+      </section>
+     
+      <section className="bannerSec">
+        <div className="container">
+            <div className="row">
+            <div className=" col-md-12 col-sm-12 col-xs-12 d-flex mt-4 mb-5 ">
+                <div className="col-md-6 col-sm-12 col-xs-12">
               <div class="mx-auto grid max-w-6xl grid-cols-4 gap-4 sm:grid-cols-8">
               <div class="flex items-center justify-center">
-                <h3>Why <b>PTech</b> ?</h3>
-                <p>We’re here to guide and support you with every aspect of your career journey, from interview preparation, to valuable industry insights.</p>
+                <h3 className="mb-0 hd">Why <b>PTech</b> ?</h3>
+                <p className="text-medium text-light mb-0">We’re here to guide and support you with every aspect of your career journey, from interview preparation, to valuable industry insights.</p>
                 </div>
               </div>
                 </div>
-                <div className="banner">
+                <div className="col-md-6 col-sm-12 col-xs-12">
                 <Box sx={{ maxWidth: 400 }}>
-      <Stepper activeStep={activeStep} orientation="vertical">
+      <Stepper activeStep={-1} orientation="vertical">
         {steps.map((step, index) => (
-          <Step key={step.label}>
+          <Step key={step.title} expanded> 
             <StepLabel
-              optional={
-                index === 2 ? (
-                  <Typography variant="caption">Last step</Typography>
-                ) : null
-              }
+             
             >
-              {step.label}
+              {step.title}
             </StepLabel>
             <StepContent>
-              <Typography>{step.description}</Typography>
-              <Box sx={{ mb: 2 }}>
-                <div>
-                  <Button
-                    variant="contained"
-                    onClick={handleNext}
-                    sx={{ mt: 1, mr: 1 }}
-                  >
-                    {index === steps.length - 1 ? 'Finish' : 'Continue'}
-                  </Button>
-                  <Button
-                    disabled={index === 0}
-                    onClick={handleBack}
-                    sx={{ mt: 1, mr: 1 }}
-                  >
-                    Back
-                  </Button>
-                </div>
-              </Box>
+              <Typography className="text-medium text-light">{step.description}</Typography>
+             
             </StepContent>
           </Step>
         ))}
       </Stepper>
-      {activeStep === steps.length && (
-        <Paper square elevation={0} sx={{ p: 3 }}>
-          <Typography>All steps completed - you&apos;re finished</Typography>
-          <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
-            Reset
-          </Button>
-        </Paper>
-      )}
+     
     </Box>
                 </div>
               </div>
             </div>
-          </div>
         </div>
+      
       </section>
+     
+   
       
       <section className="newsLetterSection mt-3 mb-3 d-flex align-items-center">
         <div className="container">
