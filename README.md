@@ -81,7 +81,7 @@ npm install
 #cdc1b6
 #3b433d
 fff1ee
-
+npm i react-responsive-carousel
 
 
    <section className="homeProducts">
