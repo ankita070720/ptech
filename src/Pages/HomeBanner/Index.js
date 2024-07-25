@@ -18,8 +18,8 @@ import {  Navigation, Autoplay } from 'swiper/modules';
 export default function HomeBanner() {
   return (
     <>
-     <div class="container-fluid overflow-hidden g-0">
-        <div class="homeBannerSection">
+     <div className="container-fluid overflow-hidden g-0">
+        <div className="homeBannerSection">
             <Swiper
         spaceBetween={0}
         autoplay={{

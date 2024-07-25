@@ -123,13 +123,17 @@ const Navigation = () => {
                   <Link to="/">
                     <Button>company Reviews</Button>
                   </Link>
-                 <Link to="/">
+                
+                 
+                  <Link to="/">
                     <Button>Coding Test</Button>
                   </Link>
                   <Link to="/">
                     <Button>Salary Guide</Button>
                   </Link>
-                 
+                  <Link to="/">
+                    <Button>How to Write Resume</Button>
+                  </Link>
                 </div>
               </li>
               <li className="list-inline-item">
