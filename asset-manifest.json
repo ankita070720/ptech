@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/ptech/static/css/main.c61cc4a9.css",
-    "main.js": "/ptech/static/js/main.8801d8af.js",
+    "main.css": "/ptech/static/css/main.b595bec0.css",
+    "main.js": "/ptech/static/js/main.a7527d40.js",
     "static/media/banner4.jpg": "/ptech/static/media/banner4.e316a9f8c6d586c8a024.jpg",
     "static/media/banner1.jpg": "/ptech/static/media/banner1.9cf38d3d365e103c3026.jpg",
     "static/media/banner3.jpg": "/ptech/static/media/banner3.c49bd0d8f510a65ec585.jpg",
     "static/media/banner2.jpg": "/ptech/static/media/banner2.0bd95f05022c3fbbe2ea.jpg",
     "static/media/logop.svg": "/ptech/static/media/logop.a6f50ca9b73f02e7f07a87a1f24f805e.svg",
     "index.html": "/ptech/index.html",
-    "main.c61cc4a9.css.map": "/ptech/static/css/main.c61cc4a9.css.map",
-    "main.8801d8af.js.map": "/ptech/static/js/main.8801d8af.js.map"
+    "main.b595bec0.css.map": "/ptech/static/css/main.b595bec0.css.map",
+    "main.a7527d40.js.map": "/ptech/static/js/main.a7527d40.js.map"
   },
   "entrypoints": [
-    "static/css/main.c61cc4a9.css",
-    "static/js/main.8801d8af.js"
+    "static/css/main.b595bec0.css",
+    "static/js/main.a7527d40.js"
   ]
 }
