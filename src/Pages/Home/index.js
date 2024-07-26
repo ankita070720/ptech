@@ -11,19 +11,20 @@ import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Box from '@mui/material/Box';
-import { Typography} from '@mui/material';
+import { Typography, Grid} from '@mui/material';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import ButtonBase from '@mui/material/ButtonBase';
+
 
 
 
 const jobs = [
-  { title: 'Software Engineer', description: 'Develop and maintain software applications.', id: 1 },
-  { title: 'Data Scientist', description: 'Analyze and interpret complex data.', id: 2 },
-  { title: 'Product Manager', description: 'Lead product development teams.', id: 3 },
+  { title: 'Software Engineer', description: 'Project Role :Software Development EngineerProject Role Description EngineerProject :Analyze, design, c....', id: 1 , company:'Accenture', rating:4.0, reviews:48745, yearofexperience:"2-6 Yrs", salary: "Not disclosed", location:'Pune',keyskills:'java,HTML,Docker,CSS,Javascript, ReactJs', day: 'day ago'},
+  { title: 'Data Scientist', description: 'Project Role: Analyze and interpret complex data Development EngineerProject Role Description EngineerProject Role Description :Analyze.', id: 2 ,company:'Accenture', rating:4.0, reviews:48745, yearofexperience:"2-6 Yrs", salary: "Not disclosed", location:'Pune',keyskills:'java,HTML,Docker,CSS,Javascript, ReactJs', day: 'day ago'},
+  { title: 'Product Manager', description: 'Project Role: Lead product development teams Analyze and interpret complex data EngineerProject.', id: 3,company:'Accenture', rating:4.0, reviews:48745, yearofexperience:"2-6 Yrs", salary: "Not disclosed", location:'Pune',keyskills:'java,HTML,Docker,CSS,Javascript, ReactJs', day: 'day ago' },
+  
 ];
 
 
@@ -57,7 +58,10 @@ const teamMembers = [
     maxHeight: '100%',
   });
 const Home=()=>{
-    
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Handle form submission logic here
+  };
     
     return(<>
     <HomeBanner/>
@@ -155,12 +159,12 @@ const Home=()=>{
            <div className="col-md-12 ">
               <div className="d-flex align-item-center">
                 <div className="info w-75">
-                  <h3 className="mb-0 hd">Get Jobs </h3>
+                  <h3 className="mb-0 hd">Discover your Future</h3>
                   <p className="text-light text-medium mb-0">
-                    Seize this opportunity to advance your career with industry leaders.
+                    Find the job that fits you best with us!
                   </p>
                 </div>
-                <Button className="viewAllBtn ml-auto">
+                <Button className="viewAllBtn rightSubtitle">
                   View All 
                 </Button>
               </div>
@@ -181,33 +185,47 @@ const Home=()=>{
           theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
       }}
     >
-                <div>
-                <ButtonBase sx={{ width: 128, height: 128 }}>
-            <Img alt="complex" src="https://www.w3schools.com/howto/img_avatar.png" />
-          </ButtonBase>
-                </div>
+               
             <div className="allinfo">
-            <Typography gutterBottom variant="subtitle1" component="div">
-              {job.title}
-              </Typography>
-              <Typography variant="body2" gutterBottom>
-                {job.description}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                ID: 1030114
-              </Typography>
+            <div className="details">
+              <div className="row1">
+              <h3>{job.title}</h3>
               </div>
-              <div>
-              <Typography sx={{ cursor: 'pointer' }} variant="body2">
-                Remove
-              </Typography>
-              <div>
-              <Typography variant="subtitle1" component="div">
-              $19.00
-            </Typography>
+              <div className="row2 d-flex align-items-center mt-2 mb-2 ">
+              
               </div>
+              <div className="row3 d-flex align-items-center mt-2 mb-2">
+             
+            
               </div>
- 
+              <div className="row4 d-flex align-items-center mt-2 ">
+              <p>{job.description}</p>
+              </div>
+              <div className="row5 d-flex align-items-center mb-2">
+              <h6>{job.keyskills}</h6>
+            
+           
+              </div>
+              <div className="row6 d-flex align-items-center mt-2 mb-2">
+              <Grid container justify="space-between">  
+  <Typography sx={{ cursor: 'pointer' }} inline variant="body1" align="left" className="text-info">Apply Here</Typography>
+  <Typography  ariant="subtitle1" component="div" inline  align="right" className="text-info rightSubtitle">Save Job </Typography>
+</Grid>
+              </div>
+            
+           
+            
+              
+           
+             
+            
+             
+              
+              
+              </div>
+              
+             
+ </div>
                               </Paper> 
                                         </div>
                 )})}
@@ -262,29 +280,88 @@ const Home=()=>{
       
       <section className="newsLetterSection mt-3 mb-3 d-flex align-items-center">
         <div className="container">
-            <div className="row">
-                <div className="col-md-6 ">
-                   <h4 className="text-white">Get In Touch..</h4> 
-                   <p className="text-light">Join our email subscription now to get updates<br/> on job notifications.</p> 
-                    <form>
+        <h3 className="mb-0 hd display-2 text-white">Contact Us</h3>
+            <p className="display-2 text-light mb-0">Get In Touch..</p>
+            <p className="text-light display-2  mb-0">Join our email subscription now to get updates on job notifications.</p> 
                    
-                      
-                       
-                        <input type="text" placeholder="please enter email.."/>
-                       
 
-                        <Button>Subscribe</Button>
-                    </form>
+            <div className="row no-gutters mt-4">
+            
+                <div className="col-md-8 contactForm ">
+                 
+
+                    <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="name"><strong>Name</strong></label>
+              <input
+                type="text"
+                className="form-control"
+                id="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email"><strong>Email address</strong></label>
+              <input
+                type="email"
+                className="form-control"
+                id="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="phone"><strong>Phone (optional)</strong></label>
+              <input
+                type="text"
+                className="form-control"
+                id="phone"
+                placeholder="Your Phone Number"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="subject"><strong>Subject</strong></label>
+              <input
+                type="text"
+                className="form-control"
+                id="subject"
+                placeholder="Subject"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="message"><strong>Message</strong></label>
+              <textarea
+                className="form-control"
+                id="message"
+                rows="4"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" className="btn btn-primary">Submit</button>
+          </form>
                 </div>
-                <div className="col-md-6 ml-auto">
-                <h4 className="text-white" id="w-c-s-fc_p-1-dm-id">
-          <b>Reach us at</b>
-        </h4>
+                <div className="col-md-4 ml-auto text-white contactInfo">
+              <div className="flex-w size11 p-b-47"><h4>Address:</h4>
+               <p>PTech Placement Solutions<br/>
+                Indore M.P,<br/>
+                Road M.P,<br/>
+                India.
+              </p></div>
+              <div className="dis-flex size11 p-b-47">
+              <p><strong>Phone:</strong>  +1(123)456-7890</p>
+              </div>
+               <div className="dis-flex size11 p-b-47">
+               <p>
+                <strong>Email:</strong>   contact@ptech.com
+                
+              </p>
+               </div>
+              
+
        
-        <p className="text-white">
-         Address: Indore, MP
-         Contact number: 821881289198
-        </p>
        
         
                     </div>
