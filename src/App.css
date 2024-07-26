@@ -285,9 +285,10 @@ nav .navpart2 ul li:hover .submenu{opacity: 1; visibility: inherit; top:100%;}
   background: #F6F9FC;
   padding: 30px 25px;}
 
-.newsLetterSection form input{  width: 100%; height: 100%; background: #fff!important; outline: none !important; border: 1px solid #cdc1b6 !important; padding-left: 40px; padding-right: 200px;}
+.newsLetterSection form input{  width: 100%; height: 100%; background: #fff!important; outline: none !important;  padding-left: 40px; padding-right: 200px;}
 .newsLetterSection form button{background-color: #6c757d!important; font-size: 14px !important; padding: 12px 25px !important; color: #fff !important; text-transform: capitalize !important; font-weight: 600 !important;}
-.contactInfo{padding: 30px 15px 0; background-color:#474040 ;}
+.contactInfo{padding: 30px 15px 0; background-color:#3b433d ;}
+.contactForm button{border: 1px solid #6c757d !important;}
 .size11{    width: 355px;    padding: 10px 30px;
   max-width: 100%;}
 footer{width: 100%; height: 500px; margin:auto; background: #fff; padding:25px 0px;}
