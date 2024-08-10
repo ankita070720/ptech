@@ -11,9 +11,9 @@ const Header = () => {
   return (
     <>
       <div className="headerWrapper">
-        <div className="top-strip bg-blue">
+        <div className="top-strip bg-blue col-sm-12 col-xs-12">
           <div className="container">
-            <p className="col-sm-12 mb-0 mt-0 text-center">
+            <p className="col-sm-12 col-xs-12 mb-0 mt-0 text-center">
               We <b>Provide</b> best, Candidates and Placements for talent.
             </p>
           </div>
@@ -21,27 +21,29 @@ const Header = () => {
         <header className="header">
           <div className="container">
             <div className="row">
-              <div className="logoWrapper d-flex align-items-center col-sm-2">
+              <div className="logoWrapper d-flex align-items-center col-md-2 col-sm-12 col-xs-12">
                 <Link to={"/"}>
                   <img src={Logo} alt="logo" />
                 </Link>
               </div>
-              <div className="d-flex align-items-center col-sm-10 part2">
+              <div className="col-md-10 col-sm-6 col-xs-6 part2">
                 {/* Header Search Icon start here  */}
 
                 {/* Header Search Icon End here*/}
                 {/* User Icon start here */}
+
                 <SearchBox />
-                <div className="part3 d-flex align-items-center ml-auto userTab">
+                
+                <div className="part3  d-flex align-items-center ml-auto userTab">
                   <Button className="circle ml-3 mr-2">
                     <FiUser />
                   </Button>
-                  <span className="price mr-3">Login User</span>
+                  <span className="price mr-3"><Link to="/signup">Login User</Link></span>
                   <Button className="circle ml-3 mr-2">
                     {" "}
                     <PiUsersFourLight />
                   </Button>
-                  <span className="price mr-3">Login Company</span>
+                  <span className="price mr-3"><Link to="/signup">Login Company</Link></span>
                 </div>
               </div>
             </div>

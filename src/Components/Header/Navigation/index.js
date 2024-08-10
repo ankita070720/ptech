@@ -8,13 +8,19 @@ import { FaAngleRight } from "react-icons/fa6";
 import { PiUsersFourLight } from "react-icons/pi";
 import { FiUser } from "react-icons/fi";
 import { MdMiscellaneousServices } from "react-icons/md";
+import { GiHamburgerMenu } from "react-icons/gi";
 const Navigation = () => {
   const [isopenSidebarNavVal, setisopenSidebarNavValset] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  const handleShowNavbar = () => {
+    setShowNavbar(!showNavbar);
+  };
   return (
     <nav>
       <div className="container">
         <div className="row">
-          <div className="col-sm-3 navpart1">
+          <div className="navpart1">
             <div className="catWrapper">
               <Button
                 className="allCatTab align-item-center"
@@ -105,7 +111,12 @@ const Navigation = () => {
               </div>
             </div>
           </div>
-          <div className="col-sm-9 navpart2 d-flex align-item-center">
+          <div className="col-sm-12 navpart2 d-flex align-item-center">
+          <div className="menu-icon" onClick={handleShowNavbar}>
+          < GiHamburgerMenu/>
+        </div>
+        
+        <div className={`nav-elements  ${showNavbar === true? "active": " "}`}>
             <ul className="list list-inline w-100">
               <li className="list-inline-item">
                 <Link to="/">
@@ -137,7 +148,7 @@ const Navigation = () => {
                 </div>
               </li>
               <li className="list-inline-item">
-                <Link to="/">
+                <Link to="/company">
                   <Button>
                       <PiUsersFourLight /> &nbsp; Company
                   </Button>
@@ -145,37 +156,38 @@ const Navigation = () => {
                 
               </li>
               <li className="list-inline-item">
-                <Link to="/">
+                <Link to="/job">
                   <Button>
                     <FiUser /> &nbsp; Jobs
                   </Button>
                 </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/">
+                <Link to="/services">
                   <Button>
                     <MdMiscellaneousServices /> &nbsp; Services
                   </Button>
                 </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/">
+                <Link to="/about">
                   <Button>
                    About Us
                   </Button>
                 </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/">
+                <Link to="/blogs">
                   <Button> Blog</Button>
                 </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/">
+                <Link to="/contact">
                   <Button> Contact Us</Button>
                 </Link>
               </li>
             </ul>
+            </div>
           </div>
         </div>
       </div>

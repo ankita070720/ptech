@@ -9,6 +9,34 @@ import { FaBook } from "react-icons/fa6";
 const Footer = ()=>{
     return(<>
     <footer>
+    <section className="newsLetterSection mt-3 mb-3 d-flex align-items-center">
+          <div className="container">
+            <h3 className="mb-0 hd display-2 text-white">Join our newsletter</h3>
+            <p className="display-2 text-light mb-0">Get In Touch..</p>
+            <p className="text-light display-2  mb-0">
+            Join our email subscription now to get updates on job notifications.
+            </p>
+            <div className="row no-gutters mt-4">
+              <div className="col-md-8  ">
+                <form>
+                 
+                  <input
+                      type="email"
+                      id="email"
+                      placeholder="Your Email"
+                      required
+                    />
+                  
+                  
+                  <button type="submit" className="btn btn-primary">
+                    Submit
+                  </button>
+                </form>
+              </div>
+           
+            </div>
+          </div>
+        </section>
     <div className="container">
         <div className="topInfo row">
         <div className="col d-flex align-items-center">
@@ -68,8 +96,10 @@ const Footer = ()=>{
                 </ul>
             </div>
             <div className="col">
-                <h5>Interview Prepration</h5>
+                <h5>Resources</h5>
                 <ul>
+                <li><Link to="#">Pricing</Link></li>
+                <li><Link to="#">About Us</Link></li>
                     <li><Link to="#">Interview Q&A</Link></li>
                     <li><Link to="#">Compete Mock Interview Questions </Link></li>
                     <li><Link to="#">Coding Challenges

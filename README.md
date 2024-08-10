@@ -191,3 +191,72 @@ npm i react-responsive-carousel
             </div>
         </div>
       </section>
+
+
+About us
+Careers
+Employer home
+Sitemap
+Credits
+Help center
+Summons/Notices
+Grievances
+Report issue
+Privacy policy
+Terms & conditions
+Fraud alert
+Trust & safety
+
+npm install mongoose
+nav .navpart2 ul li a:hover{
+  background: #f0faff;color: #2bbef9;
+}
+
+
+    const { register, handleSubmit, control, formState: { errors, isSubmitting } } = useForm();
+    const onSubmit = data => console.log(data);
+    console.log(errors);
+    return(<>
+   
+   <form onSubmit={handleSubmit(onSubmit)}>
+      <input type="text" name="Firstname" placeholder="First name" {...register("Firstname", {required: true, maxLength: 80})} />
+      {errors.Firstname &&(<p style={{color:"orangered"}}>{errors.Firstname.message}</p>)}
+      <input type="text" placeholder="Last name" {...register("Lastname", {required: true, maxLength: 100})} />
+      {errors.Lastname &&(<p style={{color:"orangered"}}>{errors.Lastname.message}</p>)}
+      <input type="text" placeholder="Email" {...register("Email", {required: true, pattern:{value: /^\S+@\S+$/i, message:"Invalid email address"},})} />
+      {errors.Email &&(<p style={{color:"orangered"}}>{errors.Email.message}</p>)}
+      <input type="tel" placeholder="Mobile number" {...register("Mobilenumber", {required: true, minLength:{value:6, message:"Minimum 6 digits are allowed"}, maxLength: {value:12, message:"Maximum 12 digits are allowed"},})} />
+      {errors.Mobilenumber &&(<p style={{color:"orangered"}}>{errors.Mobilenumber.message}</p>)}
+      <select {...register("Title", { required: "Title is required" })}>
+        <option value="Mr">Mr</option>
+        <option value="Mrs">Mrs</option>
+        <option value="Miss">Miss</option>
+        <option value="Dr">Dr</option>
+      </select>
+      {errors.Title &&(<p style={{color:"orangered"}}>{errors.Title.message}</p>)}
+      <div className="address">
+      <label>Address</label>
+      <input {...register("address.city",{required:"City is required"})} placeholder="City"/>
+      {errors.address?.city && (<p style={{color:"orangered"}}>{errors.address.city}</p>)}
+      <input {...register("address.state",{required:"state is required"})} placeholder="state"/>
+{errors.address?.state && (<p style={{color:"orangered"}}>{errors.address.state}</p>)}
+      </div>
+
+
+<Controller
+        control={control}
+        name="startDate"
+        render={({ field: { onChange, value,} }) => (
+          <ReactDatePicker
+            placeholderText="Select Date"
+            onChange={onChange} // send value to hook form   // notify when input is touched/blur
+            selected={value}
+          />
+        )}
+      />
+      <input {...register("Developer", { required: true })} type="radio" value="Yes" />
+      <input {...register("Developer", { required: true })} type="radio" value="No" />
+
+      <input type="submit" />
+    </form>
+  
