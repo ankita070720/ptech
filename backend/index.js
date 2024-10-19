@@ -1,14 +1,20 @@
 const express = require('express');
-const connectMongoDb =require('./connection');
 const {logReqRes} =require("./middlewares");
 const userRouter =require("./routes/users");
+const { handleConnectionDB } = require("./connection");
+
 
 
 const app= express();
 const port=3000;
 
 // connection
-connectMongoDb("mongodb://127.0.0.1:27017/grocerymarket");
+
+handleConnectionDB("mongodb://127.0.0.1:27017/grocerymarket").then(()=>{console.log("db connected")});
+
+
+
+
 
 // middleware plugin
 app.use(express.urlencoded({extended:false}));

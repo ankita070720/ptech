@@ -4,7 +4,7 @@ import CompanySection from "../../Components/CompanySection";
 import FirmBackground from "../../Components/FirmBackground";
 import JobSection from "../../Components/JobSection";
 import OurStory from "../../Components/OurStory";
-import ContactInfo from "../../Components/ContactInfo";
+
 
 const Home = () => {
   return (

@@ -6,7 +6,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Home from "./Pages/Home";
 import {Routes, Route } from 'react-router-dom';
-import HomeBanner from "./Pages/HomeBanner/Index";
+
 import Blogs from "./Pages/Blogs";
 import ContactUs from "./Pages/ContactUs";
 import Company from "./Pages/Company";
