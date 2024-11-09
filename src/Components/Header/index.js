@@ -38,12 +38,12 @@ const Header = () => {
                   <Button className="circle ml-3 mr-2">
                     <FiUser />
                   </Button>
-                  <span className="price mr-3"><Link to="/signup">Login User</Link></span>
+                  <span className="price mr-3"><Link to="/login">Login</Link></span>
                   <Button className="circle ml-3 mr-2">
                     {" "}
                     <PiUsersFourLight />
                   </Button>
-                  <span className="price mr-3"><Link to="/signup">Login Company</Link></span>
+                  <span className="price mr-3"><Link to="/signup">Register</Link></span>
                 </div>
               </div>
             </div>

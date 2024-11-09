@@ -881,8 +881,8 @@ font-size: 25px;
   }
   
   .box3 img {
-    height: 100%;
- max-width: 100%;
+     height: 100%;
+      max-width: 100%;
       object-fit: cover;
       width: auto;
       /* border: 1px solid #ddd; */
@@ -908,4 +908,27 @@ font-size: 25px;
 }
 .aboutBio2 p{
   padding: 20px 0px;
+}
+
+.dashboardWrapper{
+  padding: 40px;
+  margin: 20px;
+}
+.dashboardWrapper h2{
+ padding: 10px 0px 20px 0;
+}
+.dashboardWrapper table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.dashboardWrapper td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.dashboardWrapper tr:nth-child(even) {
+  background-color: #dddddd;
 }

@@ -1,3 +1,0 @@
-schema- Define the structure
-    Schema -model
-    Using model we do  Curd operation   

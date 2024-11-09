@@ -1,11 +1,94 @@
-import { Button } from "@mui/material";
-import { useForm } from "react-hook-form";
+// import { Button } from "@mui/material";
+// import { useForm } from "react-hook-form";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import axios from 'axios'
+import { useNavigate } from "react-router-dom";
+const RegistrationForm = () => {
+    const [name, setName] = useState()
+    const [email, setEmail] = useState()
+    const [password, setPassword] = useState()
+    const navigate = useNavigate()
 
-const RegistrationForm=(()=>{
-    useForm()
-    return(<>
-   
-   <div className="signupForm">
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        axios.post("http://localhost:3001/register", { name, email, password })
+        .then(result => {console.log(result)
+        navigate("/login")
+        })
+        .catch(err => console.log(err))
+    }
+
+  // const [theme, setTheme] = useState('dark');
+
+  return (
+    <>
+      <main className="container">
+        <div className="row">
+          <div className="col-md-12">
+          <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
+        <div className="bg-white p-3 rounded w-25">
+        <h2><center>Sign Up</center></h2>
+
+            <form onSubmit={handleSubmit}>
+                <div className="mb-3">
+                    <label htmlFor="email">
+                        <strong>Name</strong>
+                    </label>
+                    <input type="text" 
+                    placeholder='Enter Name' 
+                    autoComplete='off' 
+                    name='email' 
+                    className='form-control rounded-0'
+                    onChange={(e) => setName(e.target.value)}
+                    />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="email">
+                        <strong>Email</strong>
+                    </label>
+                    <input type="text" 
+                    placeholder='Enter Email' 
+                    autoComplete='off' 
+                    name='email' 
+                    className='form-control rounded-0' 
+                    onChange={(e) => setEmail(e.target.value)}
+
+                    />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="email">
+                        <strong>Password</strong>
+                    </label>
+                    <input type="password" 
+                    placeholder='Enter Password' 
+                    name='password' 
+                    className='form-control rounded-0' 
+                    onChange={(e) => setPassword(e.target.value)}
+
+                    />
+                </div>
+                <div>
+                <input type="checkbox" id="terms" name="terms" class="css-43wgwk"></input>
+                <p>I agree to the Terms of Service and Privacy Policy.</p>
+                </div>
+              {/* Citi#@aj099 */}
+                <button type="submit" className="btn btn-success w-100 rounded-0">
+                    Sign Up
+                </button>
+                </form>
+                <p>Already have an account?</p>
+                <Link to="/login" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
+                    Login
+                </Link>
+            
+        </div>
+    </div>
+          </div>
+        </div>
+      </main>
+
+      {/* <div className="signupForm">
     <div className="container mt-5">
         <h2 className="text-center mb-4">Registration Form</h2>
         <form aria-labelledby="formHeading">
@@ -118,7 +201,8 @@ const RegistrationForm=(()=>{
             
         </form>
     </div>
-    </div>
-    </>)
-})
- export default RegistrationForm;
+    </div> */}
+    </>
+  );
+};
+export default RegistrationForm;

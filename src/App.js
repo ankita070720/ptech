@@ -14,7 +14,12 @@ import Jobs from "./Pages/Jobs";
 import NoPage from "./Pages/NoPage";
 import Services from "./Pages/Services";
 import AboutUs from "./Pages/AboutUs";
-import RegistrationForm from "./Pages/RegistrationForm";
+
+import SignIn from "./Pages/SignIn";
+import Signup from "./Pages/Signup";
+import Dashboard from "./Pages/Dashboard.js";
+
+
 
 
 
@@ -24,11 +29,8 @@ function App() {
 
 <>
 
-
-
 <Header/>
-   
-      <Routes>
+    <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/blogs" element={<Blogs />} />
           <Route path="/company" element={<Company />} />
@@ -36,11 +38,12 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<AboutUs />} />
-          <Route path="/signup" element={<RegistrationForm />} />
+          <Route path="/login" element={<SignIn />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="*" element={<NoPage />} />
     </Routes>
-
-      <Footer/>
+<Footer/>
   
 
 </>
